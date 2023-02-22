@@ -17,8 +17,8 @@ function mountElements(data) {
 function mountPodcast(data) {
     const root = document.getElementById('podcasts-list')
 
-    const podcastContainer = document.createElement('div')
-    podcastContainer.className = 'podcast-container'
+    const podcastWrapper = document.createElement('div')
+    podcastWrapper.className = 'podcast-wrapper'
 
     const name = document.createElement('h2')
     name.innerText = data.name
@@ -30,11 +30,11 @@ function mountPodcast(data) {
     const description = document.createElement('p')
     description.innerText = data.description
 
-    podcastContainer.append(name)
-    podcastContainer.append(podImg)
-    podcastContainer.append(description)
+    podcastWrapper.append(name)
+    podcastWrapper.append(podImg)
+    podcastWrapper.append(description)
 
-    root.append(podcastContainer)
+    root.append(podcastWrapper)
 }
 
 function setupListeners() {
