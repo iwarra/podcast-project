@@ -1,7 +1,9 @@
-import { loadPodcasts } from "./utils";
+import { mountElements, fetchPodcasts, setupListeners } from './utils.js'
 
-const root = document.getElementById("root")
-const data = loadPodcasts()
-console.log(data);
-mountElements(data, root)
+init()
 
+async function init() {
+    setupListeners()
+    const data = await fetchPodcasts()
+    mountElements(data)
+}
