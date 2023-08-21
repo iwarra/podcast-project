@@ -1,7 +1,7 @@
 async function fetchPodcasts() {
     try {
         const POD_URL =
-            'http://api.sr.se/api/v2/programs/index?programcategoryid=133&format=JSON'
+            'https://api.sr.se/api/v2/programs/index?programcategoryid=133&format=JSON'
         const response = await fetch(POD_URL)
         const data = await response.json()
         return data
